@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Poppins", sans-serif; 
+}
+
+html {
+    font-size: 10px; 
+}
+
+img {
+    width: 100%; 
+}
+
+main {
+    padding: 4.8rem 3.2rem; 
+    background-color: hsl(0, 0%, 98%);
+}
+
+.icon {
+    width: 5.7rem; 
+    margin-left: auto; 
+    margin-top: 3rem; 
+}
+
+.cards {
+    display: grid; 
+    grid-template-columns: 1fr;
+    margin: 0 auto; 
+    max-width: 40rem; 
+}
+
+.cards > * + * {
+    margin-top: 3rem; 
+}
+
+.card {
+    padding: 2.8rem; 
+    background-color: white; 
+    border-radius: .5rem; 
+    box-shadow: 0 10px 10px 5px hsla(229, 6%, 66%, .3); 
+    overflow: hidden; 
+}
+
+.card:nth-of-type(1) {
+    border-top: 6px solid hsl(180, 62%, 55%); 
+}
+.card:nth-of-type(2) {
+    border-top: 6px solid hsl(0, 78%, 62%); 
+}
+.card:nth-of-type(3) {
+    border-top: 6px solid hsl(34, 97%, 64%); 
+}
+.card:nth-of-type(4) {
+    border-top: 6px solid hsl(212, 86%, 64%);  
+}
+
+.card p {
+    font-size: 1.3rem; 
+    line-height: 1.75; 
+    color: hsl(229, 6%, 66%); 
+    margin-top: 1rem; 
+}
+
+.text-content {
+    text-align: center; 
+    margin: 0 auto 3rem auto; 
+    max-width: 40rem; 
+}
+
+.text-content p {
+    font-size: 1.5rem; 
+    line-height: 1.6; 
+    letter-spacing: 0.01rem; 
+    margin-top: 1.5rem; 
+    color: hsl(229, 6%, 66%); 
+}
+
+h1 {
+    font-size: 2.4rem; 
+    color: hsl(234, 12%, 34%); 
+}
+
+h2 {
+    font-size: 2.4rem; 
+    font-weight: 200; 
+    color: hsl(234, 12%, 34%); 
+}
+
+h3 {
+    font-size: 2rem; 
+    color: hsl(234, 12%, 34%); 
+}
+
+@media screen and (min-width: 650px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        max-width: 70rem; 
+        gap: 3rem; 
+    }
+    .cards > * + * {
+        margin-top: 0; 
+    }
+    h1, h2 {
+        font-size: 3rem; 
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 111rem; 
+        grid-template-areas: 
+            "super team calc"
+            "super karma calc"; 
+        margin-top: 6rem; 
+    }
+    .card:nth-of-type(1) {
+        grid-area: super; 
+        align-self: center; 
+    }
+    .card:nth-of-type(2) {
+        grid-area: team; 
+    }
+    .card:nth-of-type(3) {
+        grid-area: calc;
+        align-self: center; 
+    }
+    .card:nth-of-type(4) {
+        grid-area: karma; 
+    }
+    .text-content {
+        max-width: 54rem; 
+    }
+    h1, h2 {
+        font-size: 3.6rem; 
+    }
+}
